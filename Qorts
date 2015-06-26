@@ -1,0 +1,4 @@
+module load R
+git clone https://github.com/hartleys/QoRTs.git
+cd QoRTs_0.3.5
+R CMD INSTALL QoRTs_0.3.5.tar.gz
