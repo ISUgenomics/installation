@@ -1,0 +1,6 @@
+wget http://research-pub.gene.com/gmap/src/gmap-gsnap-2015-09-29.tar.gz
+tar -zxvf gmap-gsnap-2015-09-29.tar.gz 
+mv gmap-2015-09-29/ 2015-09-29 2015-09-29/
+#had a vpm library not found or some such
+configure --prefix=`pwd` MAX_READLENGTH=300 --enable-bzlib --enable-zlib --enable-sse2=no --enable-sse3=no --enable-sse4.1=no  
+grep perl bin/* | xargs -I xx echo xx | tr ':' ' ' | awk '{print $1}' | xargs -I xx perl -i -pe 's/ \/bin/\/usr\/bin/
